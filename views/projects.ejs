@@ -1,0 +1,23 @@
+<%- include('partials/navbar', {page: '/solutions/projects'}) %>
+
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-8">Explore Climate Solutions</h1>
+  
+  <div class="projects-container">
+    <% Object.entries(grouped).forEach(([sector, projects]) => { %>
+      <h2 class="sector-header"><%= sector %></h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <% projects.forEach(project => { %>
+          <div class="project-card">
+            <span class="sector-badge"><%= project.Sector.sector_name %></span>
+            <h3 class="project-title"><%= project.title %></h3>
+            <p class="project-summary"><%= project.summary_short %></p>
+            <a href="/solutions/projects/<%= project.id %>" class="view-btn">
+              View Details
+            </a>
+          </div>
+        <% }); %>
+      </div>
+    <% }); %>
+  </div>
+</div>

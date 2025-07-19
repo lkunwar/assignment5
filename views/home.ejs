@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Solutions</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+            <a href="/" class="btn btn-ghost text-xl">Climate Solutions</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="/about">About</a></li>
+                <li>
+                    <details>
+                        <summary>Sector</summary>
+                        <ul class="p-2 bg-base-100 rounded-t-none">
+                            <li><a href="/solutions/projects?sector=Land Sinks">Land Sinks</a></li>
+                            <li><a href="/solutions/projects?sector=Industry">Industry</a></li>
+                            <li><a href="/solutions/projects?sector=Transportation">Transportation</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mx-auto">
+        
+        <div class="hero bg-base-200 rounded-lg p-8 my-8">
+            <div class="hero-content text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">Explore Climate Solutions</h1>
+                    <p class="py-6">Discover innovative projects that are making a difference in combating climate change.</p>
+                    <a href="/solutions/projects" class="btn btn-primary">View All Projects</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
+            
+            <div class="card bg-base-100 shadow-xl">
+               <img src="/images/farmland.jpg" alt="Abandoned Farmland Restoration">
+                <div class="card-body">
+                    <h2 class="card-title">Abandoned Farmland Restoration</h2>
+                    <p>Restoration can bring degraded farmland back into productivity and sequester carbon in the process.</p>
+                    <div class="card-actions justify-end">
+                        <a href="/solutions/projects/1" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="card bg-base-100 shadow-xl">
+                <img src="/images/cement.jpg" alt="Alternative Cement"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Alternative Cement</h2>
+                    <p>Conventional cement production is a significant source of carbon dioxide. Reformulation can reduce emissions by millions of metric tons each year.</p>
+                    <div class="card-actions justify-end">
+                        <a href="/solutions/projects/2" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="/images/bicycle.jpg" alt="Bicycle Infrastructure"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Bicycle Infrastructure</h2>
+                    <p>Infrastructure is essential for supporting safe and abundant bicycle use, which curbs emissions by reducing the need for fossil-fuel-dependent transportation.</p>
+                    <div class="card-actions justify-end">
+                        <a href="/solutions/projects/3" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('partials/navbar', {page: '/solutions/addProject'}) %>
+
+    <div class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold mb-8">Add Project</h1>
+        
+        <form action="/solutions/addProject" method="POST" class="space-y-4 max-w-2xl">
+            <div>
+                <label for="title" class="block font-semibold mb-2">Title</label>
+                <input type="text" id="title" name="title" required 
+                    class="w-full p-2 border rounded">
+            </div>
+
+            <div>
+                <label for="feature_img_url" class="block font-semibold mb-2">Feature Image URL</label>
+                <input type="url" id="feature_img_url" name="feature_img_url" required 
+                    class="w-full p-2 border rounded">
+            </div>
+
+            <div>
+                <label for="sector_id" class="block font-semibold mb-2">Sector</label>
+                <select id="sector_id" name="sector_id" required class="w-full p-2 border rounded">
+                    <option value="">Select a sector</option>
+                    <% sectors.forEach(sector => { %>
+                        <option value="<%= sector.id %>"><%= sector.sector_name %></option>
+                    <% }) %>
+                </select>
+            </div>
+
+            <div>
+                <label for="intro_short" class="block font-semibold mb-2">Introduction</label>
+                <textarea id="intro_short" name="intro_short" required 
+                    class="w-full p-2 border rounded" rows="4"></textarea>
+            </div>
+
+            <div>
+                <label for="summary_short" class="block font-semibold mb-2">Summary</label>
+                <textarea id="summary_short" name="summary_short" required 
+                    class="w-full p-2 border rounded" rows="4"></textarea>
+            </div>
+
+            <div>
+                <label for="impact" class="block font-semibold mb-2">Impact</label>
+                <textarea id="impact" name="impact" required 
+                    class="w-full p-2 border rounded" rows="4"></textarea>
+            </div>
+
+            <div>
+                <label for="original_source_url" class="block font-semibold mb-2">Original Source URL</label>
+                <input type="url" id="original_source_url" name="original_source_url" required 
+                    class="w-full p-2 border rounded">
+            </div>
+
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                Add Project
+            </button>
+        </form>
+    </div>
+</body>
+</html>

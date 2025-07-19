@@ -1,0 +1,28 @@
+<%- include('partials/navbar', {page: ''}) %>
+
+<div class="project-detail">
+  <img src="<%= project.feature_img_url %>" alt="<%= project.title %>" class="feature-img">
+
+  <div class="project-content">
+    <div class="project-header">
+      <span class="sector-badge"><%= project.Sector.sector_name %></span>
+      <h1><%= project.title %></h1>
+    </div>
+
+    <div class="project-text">
+      <section class="mb-8">
+        <h2>Introduction</h2>
+        <p><%= project.intro_short %></p>
+      </section>
+
+      <section class="mb-8">
+        <h2>Impact</h2>
+        <p><%= project.impact %></p>
+      </section>
+
+      <a href="<%= project.original_source_url %>" target="_blank" class="source-link">
+        Read Original Source
+      </a>
+    </div>
+  </div>
+</div>

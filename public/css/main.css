@@ -1,0 +1,132 @@
+/* Base Styles */
+.projects-container {
+  padding: 2rem 0;
+}
+
+.sector-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #dbeafe;
+}
+
+/* Project Cards */
+.project-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.sector-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 0.75rem;
+}
+
+.project-summary {
+  color: #4b5563;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.view-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 0.375rem;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.view-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Project Detail */
+.project-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.feature-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .project-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.project-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0.5rem 0 1rem;
+}
+
+.project-text h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.project-text p {
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.source-link:hover {
+  background-color: #2563eb;
+}
