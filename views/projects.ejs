@@ -1,23 +1,35 @@
-<%- include('partials/navbar', {page: '/solutions/projects'}) %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Climate Solutions</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <%- include('partials/navbar', { page: '/solutions/projects' }) %>
 
-<div class="container mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold mb-8">Explore Climate Solutions</h1>
-  
-  <div class="projects-container">
-    <% Object.entries(grouped).forEach(([sector, projects]) => { %>
-      <h2 class="sector-header"><%= sector %></h2>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <% projects.forEach(project => { %>
-          <div class="project-card">
-            <span class="sector-badge"><%= project.Sector.sector_name %></span>
-            <h3 class="project-title"><%= project.title %></h3>
-            <p class="project-summary"><%= project.summary_short %></p>
-            <a href="/solutions/projects/<%= project.id %>" class="view-btn">
-              View Details
-            </a>
-          </div>
-        <% }); %>
-      </div>
-    <% }); %>
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">Explore Climate Solutions</h1>
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <% projects.forEach(project => { %>
+        <div class="project-card border p-4 rounded shadow bg-white">
+          <% if (project.Sector && project.Sector.sector_name) { %>
+            <span class="sector-badge text-sm text-white bg-blue-500 px-2 py-1 rounded">
+              <%= project.Sector.sector_name %>
+            </span>
+          <% } %>
+
+          <h3 class="project-title text-xl font-semibold mt-2"><%= project.title %></h3>
+          <p class="project-summary mt-2 text-gray-700"><%= project.summary_short %></p>
+
+          <a href="/solutions/projects/<%= project.id %>" class="view-btn inline-block mt-4 text-blue-600 hover:underline">
+            View Details
+          </a>
+        </div>
+      <% }) %>
+    </div>
   </div>
-</div>
+</body>
+</html>

@@ -1,28 +1,43 @@
-<%- include('partials/navbar', {page: ''}) %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><%= project.title %> - Project Details</title>
+  <link rel="stylesheet" href="/css/tailwind.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
 
-<div class="project-detail">
-  <img src="<%= project.feature_img_url %>" alt="<%= project.title %>" class="feature-img">
+  <%- include('partials/header', { page: '' }) %>
 
-  <div class="project-content">
-    <div class="project-header">
-      <span class="sector-badge"><%= project.Sector.sector_name %></span>
-      <h1><%= project.title %></h1>
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <img src="<%= project.feature_img_url %>" alt="<%= project.title %>" class="w-full h-64 object-cover rounded shadow mb-6">
+
+    <div class="mb-4">
+      <span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+        <%= project.Sector.sector_name %>
+      </span>
     </div>
 
-    <div class="project-text">
-      <section class="mb-8">
-        <h2>Introduction</h2>
-        <p><%= project.intro_short %></p>
-      </section>
+    <h1 class="text-3xl font-bold mb-6"><%= project.title %></h1>
 
-      <section class="mb-8">
-        <h2>Impact</h2>
-        <p><%= project.impact %></p>
-      </section>
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Introduction</h2>
+      <p class="text-gray-700 leading-relaxed"><%= project.intro_short %></p>
+    </section>
 
-      <a href="<%= project.original_source_url %>" target="_blank" class="source-link">
-        Read Original Source
-      </a>
-    </div>
-  </div>
-</div>
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Impact</h2>
+      <p class="text-gray-700 leading-relaxed"><%= project.impact %></p>
+    </section>
+
+    <a href="<%= project.original_source_url %>" target="_blank"
+       class="inline-block mt-4 text-blue-600 hover:underline font-medium">
+      🔗 Read Original Source
+    </a>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

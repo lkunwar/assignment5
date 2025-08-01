@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Solutions</title>
-    <link href="css/main.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Solutions</title>
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <div class="navbar bg-base-100">
-        <div class="flex-1">
+  <%- include('partials/navbar', {page: '/'}) %>
+  <div class="container mx-auto">
+    <div class="flex-1">
             <a href="/" class="btn btn-ghost text-xl">Climate Solutions</a>
         </div>
         <div class="flex-none">
@@ -78,6 +79,6 @@
                 </div>
             </div>
         </div>
-    </div>
+  </div>
 </body>
 </html>
